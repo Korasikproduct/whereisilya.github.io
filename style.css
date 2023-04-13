@@ -1,64 +1,81 @@
+/* Куда пропадает Илья? Мистерия начинается! */
+
+/* Скрываем Илью */
+.ilya {
+  display: none;
+}
+
+/* Создаем загадочное исчезновение */
+@keyframes mysterium {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Применяем загадочный стиль */
+.mysterium {
+  animation: mysterium 3s ease infinite;
+}
+
+/* Создаем загадочный фон */
 body {
   background-color: #000;
-  font-family: Arial, sans-serif;
+  background-image: url('zagadka.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Добавляем загадочный текст */
+.mysterious-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
   color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin-top: 50%;
+  transform: translateY(-50%);
 }
 
-.container {
-  max-width: 800px;
-  margin: 100px auto;
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+/* Добавляем загадочный эффект свечения */
+.mysterious-text::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.3;
+  animation: mysterium 3s ease infinite;
 }
 
-.title {
-  font-size: 48px;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 24px;
-  margin-top: 10px;
-}
-
-.image {
-  width: 300px;
-  height: 300px;
-  background-image: url('pinguin.jpg');
-  background-size: cover;
-  background-position: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-}
-
-.message {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-.clue {
-  font-size: 24px;
-  margin-top: 30px;
-}
-
-.btn {
+/* Создаем загадочную кнопку */
+.mysterious-button {
   display: inline-block;
-  font-size: 18px;
-  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+/* Добавляем загадочный эффект при наведении на кнопку */
+.mysterious-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
