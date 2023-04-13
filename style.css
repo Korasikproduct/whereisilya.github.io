@@ -1,81 +1,53 @@
-/* Куда пропадает Илья? Мистерия начинается! */
-
-/* Скрываем Илью */
-.ilya {
-  display: none;
-}
-
-/* Создаем загадочное исчезновение */
-@keyframes mysterium {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
-
-/* Применяем загадочный стиль */
-.mysterium {
-  animation: mysterium 3s ease infinite;
-}
-
-/* Создаем загадочный фон */
 body {
-  background-color: #000;
-  background-image: url('zagadka.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
-/* Добавляем загадочный текст */
-.mysterious-text {
-  font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
-  margin-top: 50%;
-  transform: translateY(-50%);
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-/* Добавляем загадочный эффект свечения */
-.mysterious-text::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  opacity: 0.3;
-  animation: mysterium 3s ease infinite;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Создаем загадочную кнопку */
-.mysterious-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+nav li {
+    display: inline;
 }
 
-/* Добавляем загадочный эффект при наведении на кнопку */
-.mysterious-button:hover {
-  opacity: 1;
-  transform: scale(1.1);
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
 }
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #000;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
